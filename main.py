@@ -123,7 +123,7 @@ class YaUploader:
             log_func(name)
 
 if __name__ == '__main__':
-    token = 'AQAAAAALx7mUAADLW1OyRUdNCEGWricfRGp-sW4'
+    token = '_______________________'
 #token = input('Введите Яндекс токен  (____________________________): ')
     uploader = YaUploader(token)
     result = uploader.upload_photo(sort_photo())
