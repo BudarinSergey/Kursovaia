@@ -103,7 +103,6 @@ class YaUploader:
         }
         headers = {'Content-Type': 'application/json', 'Authorization': f'OAuth {self.token}'}
         res2 = requests.put(url = 'https://cloud-api.yandex.net/v1/disk/resources', params=params,headers=headers)
-        pprint(res2.json())
         return inp_path
     def upload_photo(self, photo_dict: dict):
         headers = {'Content-Type': 'application/json', 'Authorization': f'OAuth {self.token}'}
@@ -123,12 +122,11 @@ class YaUploader:
             log_func(name)
 
 if __name__ == '__main__':
-    token = '_______________________'
-#token = input('Введите Яндекс токен  (____________________________): ')
+#    token = '_______________________'
+    token = input('Введите Яндекс токен  (____________________________): ')
     uploader = YaUploader(token)
     result = uploader.upload_photo(sort_photo())
 
 
 
-#if __name__ = '__main__':
 
